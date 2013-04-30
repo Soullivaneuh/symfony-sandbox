@@ -8,3 +8,15 @@ Geolocation form types.
 <input type="submit">
 </form>
 {% endblock body %}
+
+{% block stylesheets %}
+{{ parent() }}
+
+{{ form_stylesheet(form) }}
+{% endblock stylesheets %}
+
+{% block javascripts %}
+{{ parent() }}
+
+{{ form_javascript(form) }}
+{% endblock javascripts %}
