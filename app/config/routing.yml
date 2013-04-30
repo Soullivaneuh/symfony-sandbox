@@ -1,0 +1,5 @@
+sfsb_core:
+    resource: "@SFSBCoreBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
