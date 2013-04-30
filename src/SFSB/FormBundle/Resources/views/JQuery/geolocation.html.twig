@@ -3,7 +3,7 @@
 {% block body %}
 Geolocation form types.
 
-<form>
+<form method="POST" enctype="{{ form_enctype(form) }}">
 {{ form_widget(form) }}
 <input type="submit">
 </form>

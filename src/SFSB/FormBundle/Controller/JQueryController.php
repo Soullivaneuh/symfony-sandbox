@@ -52,6 +52,14 @@ class JQueryController extends Controller
                 ->getForm()
                 ;
         
+        if ($this->getRequest()->isMethod('POST')) {
+            $form->bind($this->getRequest());
+            
+            if ($form->isValid()) {
+                var_dump($form->getData());
+            }
+        }
+        
         return array(
             'form'      => $form->createView(),
         );
