@@ -1,3 +1,8 @@
+sfsb_form:
+    resource: "@SFSBFormBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 sfsb_core:
     resource: "@SFSBCoreBundle/Controller/"
     type:     annotation
