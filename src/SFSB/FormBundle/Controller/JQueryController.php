@@ -64,6 +64,36 @@ class JQueryController extends Controller
             'form'      => $form->createView(),
         );
     }
+    
+    /**
+     * @Route("/slider")
+     * @Method({"GET", "POST"})
+     * @Template("SFSBFormBundle:Default:form.html.twig")
+     */
+    public function sliderAction()
+    {
+        $form = $this->createFormBuilder()
+                ->add('price', 'genemu_jqueryslider', array(
+                    'orientation'   => 'vertical',
+                    'disabled'      => true,
+                    'data'          => 70,
+                    'step'          => 10,
+                ))
+                ->getForm()
+                ;
+
+        if ($this->getRequest()->isMethod('POST')) {
+            $form->bind($this->getRequest());
+            
+            if ($form->isValid()) {
+                var_dump($form->getData());
+            }
+        }
+
+        return array(
+            'form'      => $form->createView(),
+        );
+    }
 }
 
 ?>
