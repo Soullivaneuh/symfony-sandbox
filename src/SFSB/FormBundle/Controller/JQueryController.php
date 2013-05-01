@@ -25,7 +25,7 @@ class JQueryController extends Controller
     /**
      * @Route("/geolocation")
      * @Method({"GET", "POST"})
-     * @Template()
+     * @Template("SFSBFormBundle:Default:form.html.twig")
      */
     public function geolocationAction()
     {
