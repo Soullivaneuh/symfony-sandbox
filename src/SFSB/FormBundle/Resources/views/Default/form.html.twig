@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+Geolocation form types.
+
+<form method="POST" enctype="{{ form_enctype(form) }}">
+{{ form_widget(form) }}
+<input type="submit">
+</form>
+{% endblock body %}
+
+{% block stylesheets %}
+{{ parent() }}
+
+{{ form_stylesheet(form) }}
+{% endblock stylesheets %}
+
+{% block javascripts %}
+{{ parent() }}
+
+{{ form_javascript(form) }}
+{% endblock javascripts %}
