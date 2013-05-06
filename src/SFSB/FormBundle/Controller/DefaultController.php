@@ -41,7 +41,7 @@ class DefaultController extends Controller
             if ($form->isValid()) {
                 var_dump($flag);
                 
-                $em = $this->getDoctrine()->getEntityManager();
+                $em = $this->getDoctrine()->getManager();
                 $em->persist($flag);
                 $em->flush();
             }
