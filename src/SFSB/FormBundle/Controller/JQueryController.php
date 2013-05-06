@@ -74,10 +74,11 @@ class JQueryController extends Controller
     {
         $form = $this->createFormBuilder()
                 ->add('price', 'genemu_jqueryslider', array(
-                    'orientation'   => 'vertical',
-                    'disabled'      => true,
-                    'data'          => 70,
-                    'step'          => 10,
+                    'min'           => 0,
+                    'max'           => 100,
+                    'step'          => 1,
+                    'orientation'   => 'horizontal',
+                    'animate'       => false
                 ))
                 ->getForm()
                 ;
